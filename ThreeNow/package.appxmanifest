@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="bc93a974-b0e7-48e7-adb1-1e120585bc70" Version="1.0.0.0" Publisher="CN=Shea" />
+  <mp:PhoneIdentity PhoneProductId="bc93a974-b0e7-48e7-adb1-1e120585bc70" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>ThreeNow</DisplayName>
+    <PublisherDisplayName>Shea</PublisherDisplayName>
+    <Logo>images\storelogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="index.html">
+      <uap:VisualElements DisplayName="ThreeNow" Description="ThreeNow" BackgroundColor="#FC004E" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png" ShortName="ThreeNow" Square310x310Logo="images\Square310x310Logo.png" Square71x71Logo="images\Square71x71Logo.png">
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="images\splashscreen.png" BackgroundColor="#000000" />
+      </uap:VisualElements>
+      <uap:ApplicationContentUriRules>
+        <uap:Rule Match="https://*" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="http://*" Type="include" WindowsRuntimeAccess="none" />
+      </uap:ApplicationContentUriRules>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+  <Extensions>
+    <Extension Category="windows.certificates">
+      <Certificates>
+        <Certificate StoreName="TrustedPeople" Content="charles 2.pem" />
+      </Certificates>
+    </Extension>
+  </Extensions>
+</Package>
